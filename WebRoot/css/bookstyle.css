@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+*{
+	padding: 0;
+	margin: 0px;
+	text-decoration: none;
+}
+
+p{
+	margin: 0px;
+	overflow: hidden;
+	
+}
+
+.search{
+	text-align: center;
+}
+
+.catebox{
+	border: 2px solid #d1ccc7;
+}
+
+.catebox .outcate{
+	height: 70px;
+	
+	transition:1s;
+}
+
+
+
+.catebox .catetxt{
+	padding: 0px;height: 100%;
+}
+
+.catebox  .srll{
+	height: 100%;
+	overflow: hidden;
+		position:relative;
+}
+
+.catebox  .srll .abuo{
+	height: 100%;
+	overflow:scroll; /*任何时候都强制显示滚动条*/
+		overflow:auto; /*需要的时候会出现滚动条*/
+		overflow-x:auto; /*控制X方向的滚动条*/
+		overflow-y:auto; /*控制Y方向的滚动条*/
+}
+
+.catebox .outcate .cateid{
+	text-align: center;
+	height: 70px;
+	
+}
+
+.catebox .outcate .cateid:HOVER{
+	color: red;
+}
+.search #form{
+	float:left;
+	width: 506px;
+	 height: 38px;
+	 
+}
+
+.search #form .searchform input{
+	height: 30px;
+}
+
+.inoutbox{
+	width: 1000px;
+	margin: 20px auto;
+}
+
+.inoutbox .row .li{
+	padding: 5px 10px;
+	height: 300px;
+	transfrom:translateY(-2px);
+}
+
+.inoutbox .row .li .inbox_li{
+	width: 90%;
+	height:90%;
+	margin: 0 auto;
+	border: 3px solid #ffffff;
+	transition:.5s;
+	overflow: hidden;
+}
+
+.inoutbox .row .li .inbox_li:hover{
+	width:100%;
+	height:100%;
+	border: 3px solid #ff0036;
+	transfrom:translateY(-2px);
+	box-shadow:5px 5px 15px gray;
+}
+
+.inoutbox .row .li .inbox_li .bor{
+	border: 1px dashed #dddddd; 
+	
+}
+.inoutbox .row .li .inbox_li .bor:hover{
+	border: 1px dashed #ffffff; 
+}
+
+.inoutbox .row .li p{
+	height: 20px;
+}
+
+.inoutbox .row .li p img {
+	padding: 5px 5px;
+	text-align: center;
+	width: 220;
+	height: 190px;
+}

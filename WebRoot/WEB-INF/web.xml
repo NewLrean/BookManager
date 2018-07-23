@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>BookManger</display-name>
+  <listener>
+    <listener-class>com.student.filter.ContextFilter</listener-class>
+  </listener>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.student.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>com.student.filter.LoginFilter</filter-class>
+  </filter>
+  <welcome-file-list>
+    <welcome-file>/manager/relogin.jsp</welcome-file>
+  </welcome-file-list>
+  <filter-mapping>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/manager/main.jsp</url-pattern>
+    <url-pattern>/BookManger</url-pattern>
+    <url-pattern>/manager/relogin.jsp</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>RestrictFilter</filter-name>
+    <filter-class>com.student.filter.RestrictFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RestrictFilter</filter-name>
+    <url-pattern>/manager/*</url-pattern>
+    <url-pattern>/book/*</url-pattern>
+  </filter-mapping>
+  <resource-ref>
+    <description>mysql数据库连接池</description>
+    <res-ref-name>jdbc/mysqlds</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+</web-app>
