@@ -3,7 +3,11 @@ package com.student.cartbean;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
+/**
+ * 购物车类
+ * @author 蒋志鹏
+ *
+ */
 public class Cart {
 	private Map<String, CartItem> map;
 	private int	 totalNum;
