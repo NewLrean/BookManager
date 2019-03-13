@@ -61,16 +61,17 @@ public class AdminLoginServlet extends HttpServlet {
 			String rememberpass=request.getParameter("rememberpass");
 			System.out.println(remember);
 			admin.setPassword(DigestUtils.md5DigestAsHex(admin.getPassword().getBytes()));
+			System.out.println(DigestUtils.md5DigestAsHex(admin.getPassword().getBytes()));
 			Cookie cookie=null;
 			Cookie cookie2=null;
 			Cookie cookie4=null;
 			Cookie[] cookies = request.getCookies();
 			Admin admin2 = adminService.login(admin);
+			System.out.println(admin2);
 			if(admin2!=null){
 				
 				String time=adminService.getlogin_time();
 				session.setAttribute("login_time", time);
-				
 				session.setAttribute("admin", admin2);
 				if(remember!=null){
 					if(rememberpass!=null){
