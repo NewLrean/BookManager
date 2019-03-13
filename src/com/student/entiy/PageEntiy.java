@@ -1,15 +1,10 @@
 package com.student.entiy;
 
-import javax.persistence.Transient;
-
 public class PageEntiy {
-	@Transient
 	private Integer pageNum=0;
 	
-	@Transient
 	private Integer PageSize=4;
 
-	@Transient
 	private Integer pages;
 	
 	private String objfan;

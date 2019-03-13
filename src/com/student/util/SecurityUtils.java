@@ -3,7 +3,6 @@ package com.student.util;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;

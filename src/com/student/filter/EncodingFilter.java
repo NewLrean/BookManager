@@ -2,8 +2,6 @@ package com.student.filter;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -11,12 +9,9 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
-
-import com.student.util.Dbconn;
 
 public class EncodingFilter implements Filter {
 
@@ -55,7 +50,6 @@ class MyHttpServletRequest extends HttpServletRequestWrapper{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
 	public MyHttpServletRequest(HttpServletRequest request) {
 		super(request);
 		// TODO Auto-generated constructor stub

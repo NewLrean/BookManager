@@ -2,7 +2,6 @@ package com.student.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -124,7 +123,7 @@ public class BookDaoImpl implements BookDao {
 		String sql="select count(*) from books where tag=1";
 		
 		try {
-			Object query = runner.query(sql, new ScalarHandler(1));
+			Object query = runner.query(sql, new ScalarHandler<Object>(1));
 			Long long1=(Long)query;
 			return long1.intValue();
 		} catch (SQLException e) {
@@ -206,7 +205,7 @@ public class BookDaoImpl implements BookDao {
 		String sql="select count(*) from books where tag=1 and title like ? ";
 		
 		try {
-			Object query = runner.query(sql, new ScalarHandler(1),"%"+title+"%");
+			Object query = runner.query(sql, new ScalarHandler<Object>(1),"%"+title+"%");
 			Long long1=(Long)query;
 			return long1.intValue();
 		} catch (SQLException e) {

@@ -2,7 +2,6 @@ package com.student.controller;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,14 +14,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.util.DigestUtils;
 
-
-import com.student.dao.AdminDao;
-import com.student.dao.StudentDao;
-import com.student.dao.impl.AdminDaoImpl;
-import com.student.dao.impl.StudentDaoImpl;
 import com.student.entiy.Admin;
-import com.student.entiy.PageEntiy;
-import com.student.entiy.Student;
 import com.student.service.AdminService;
 import com.student.service.StudentService;
 import com.student.service.impl.AdminServiceImpl;

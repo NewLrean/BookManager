@@ -1,9 +1,7 @@
 package com.student.dao.impl;
 
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
@@ -14,7 +12,6 @@ import com.student.entiy.OrderItem;
 import com.student.entiy.Orders;
 import com.student.util.Dbconn;
 import com.student.util.IdGenrtor;
-import com.sun.org.apache.bcel.internal.generic.IfInstruction;
 
 public class OrderDaoImpl implements OrderDao {
 

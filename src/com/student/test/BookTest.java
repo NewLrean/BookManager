@@ -1,9 +1,5 @@
 package com.student.test;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -15,7 +11,6 @@ import com.student.dao.BookDao;
 import com.student.dao.impl.BookDaoImpl;
 import com.student.entiy.Book;
 import com.student.entiy.PageEntiy;
-import com.student.util.IdGenrtor;
 
 public class BookTest {
 	BookDao bookDao=new BookDaoImpl();

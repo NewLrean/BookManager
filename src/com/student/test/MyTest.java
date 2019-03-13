@@ -8,11 +8,8 @@ import org.junit.Test;
 import org.springframework.util.DigestUtils;
 
 import com.student.dao.AdminDao;
-import com.student.dao.StudentDao;
 import com.student.dao.impl.AdminDaoImpl;
-import com.student.dao.impl.StudentDaoImpl;
 import com.student.entiy.Admin;
-import com.student.entiy.PageEntiy;
 import com.student.entiy.Student;
 import com.student.proxy.DynamicProxy;
 import com.student.service.StudentService;
@@ -33,7 +30,6 @@ public class MyTest {
 	
 	@Test
 	public void showadmin(){
-		StudentService studentService=new StudentServiceImpl();
 		
 		AdminDao adminDao=new AdminDaoImpl();
 		Admin admin=new Admin();

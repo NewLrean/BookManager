@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadBase;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -30,9 +29,6 @@ import com.student.entiy.Book;
 import com.student.service.BookService;
 import com.student.service.impl.BookServiceImpl;
 import com.student.util.IdGenrtor;
-
-import jdk.nashorn.internal.scripts.JS;
-import net.sf.json.JSONObject;
 
 /**
  * Servlet implementation class BookServlet
@@ -55,7 +51,6 @@ public class BookServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		boolean isMulti = ServletFileUpload.isMultipartContent(request);
 		String method = request.getParameter("method");
 		System.out.println(method);
 		switch (method) {
@@ -87,6 +82,7 @@ public class BookServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unchecked")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		boolean isMulti = ServletFileUpload.isMultipartContent(request);

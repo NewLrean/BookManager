@@ -1,8 +1,6 @@
 package com.student.cartbean;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 /**
  * 购物车类
  * @author 蒋志鹏

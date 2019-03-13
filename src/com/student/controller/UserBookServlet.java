@@ -34,8 +34,6 @@ import com.student.service.impl.OrderServiceImpl;
 import com.student.service.impl.UserServiceImpl;
 import com.student.util.SecurityUtils;
 
-import sun.print.PSPrinterJob.EPSPrinter;
-
 
 /**
  * Servlet implementation class UserBookServlet
@@ -103,7 +101,6 @@ public class UserBookServlet extends HttpServlet {
 
 	private void orderdetails(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String orderid = request.getParameter("id");
 		
 	}
 

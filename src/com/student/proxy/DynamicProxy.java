@@ -2,10 +2,8 @@ package com.student.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.sql.Connection;
 
 import com.student.dao.AdminDao;
-import com.student.util.Dbconn;
 import com.student.util.Utils;
 
 

@@ -3,6 +3,10 @@ package com.student.entiy;
 import java.io.Serializable;
 
 public class Student extends PageEntiy implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private String password;
