@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+	<c:set var="ctx" value="${pageContext.request.contextPath }"></c:set>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +64,7 @@ font-family: cursive !important;
       <button type="submit" class="btn btn-default">登录</button>
       </div>
       <div class="col-sm-6">
-      <a class="btn btn-default" href="/user/register.jsp">注册</a>
+      <a class="btn btn-default" href="${ctx }/user/register.jsp">注册</a>
       </div>
       
     </div>

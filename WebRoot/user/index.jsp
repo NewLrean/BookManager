@@ -57,7 +57,7 @@ list-style: none;
     	<div class="message">共<i class="blue" style="font-size: 15px;">${requestScope.entiy.pages}</i>页，当前显示第&nbsp;<i class="blue" style="font-size: 15px;">&nbsp;${requestScope.entiy.pageNum+1}</i>页</div>
         <ul class="paginList">
         <li class="paginItem"><a href="${ctx }/user/UserBookServlet?method=${requestScope.method}&pageNum=${requestScope.entiy.pageNum}"><span class="pagepre"></span></a></li>
-        <c:forEach var="i" begin="0" end="${requestScope.entiy.pages-1}" step="1"> 
+        <c:forEach var="i" begin="0" end="${requestScope.entiy.pages-1 < 0 ? 0:requestScope.entiy.pages-1}" step="1"> 
        
         <li class="paginItem"><a href="${ctx }/user/UserBookServlet?method=${requestScope.method}&pageNum=${i+1}"><c:out value="${i+1}" /></a></li> 
 			   

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Admin {
+	
 	private Integer id;
 	private String name;
 	private String password;
-	
 	private List<Role> list=new ArrayList<Role>();
 	
 	
